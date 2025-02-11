@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "style.css">
+    <title>HH EATS</title>
+</head>
+<body>
+    <h1>외대~회기 식당 룰렛</h1>
+    <div> <!-- 범위, 메뉴 -->
+        <fieldset>
+            <legend>범위</legend>
+            <label><input type="checkbox" name="위치" value="정문">정문</label>
+            <label><input type="checkbox" name="위치" value="후문">후문</label>
+            <label><input type="checkbox" name="위치" value="회기">회기</label>
+        </fieldset>       
+        <fieldset>
+            <legend>메뉴</legend>
+            <label><input type="checkbox" name="메뉴" value="한식">한식</label>
+            <label><input type="checkbox" name="메뉴" value="중식">중식</label>
+            <label><input type="checkbox" name="메뉴" value="일식">일식</label>
+            <label><input type="checkbox" name="메뉴" value="양식">양식</label>
+            <label><input type="checkbox" name="메뉴" value="분식">분식</label>
+            <label><input type="checkbox" name="메뉴" value="기타">기타</label>
+        </fieldset>     
+    </div>
+    <div> <!-- 룰렛 버튼 -->
+        <button id="rouletteButton">룰렛 돌리기</button>
+    </div>
+    <div> <!-- 결과 상자 -->
+        <fieldset id="resultFieldset">
+            <legend>결과</legend>
+            <div id="result"></div>
+        </fieldset>
+    </div>
+    <!-- div> API 미구현
+        <fieldset>
+            <legend>지도</legend>
+            <div id="locationInfo"></div>
+        </fieldset>
+    </! -->
+    <script src="script.js"></script>
+</body>
+</html>
