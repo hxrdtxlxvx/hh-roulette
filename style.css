@@ -33,3 +33,18 @@ fieldset {
     width: 40%;
     margin: 0 auto;
 }
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px; 
+    }
+
+    button#rouletteButton {
+        font-size: 14px; 
+        padding: 10px 20px;
+    }
+}
