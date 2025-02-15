@@ -58,6 +58,12 @@ button#rouletteButton {
     cursor: pointer; /* 커서 모양 변경 */
 }
 
+#credit {
+    font-size: 12px;
+    font-weight: 300;
+    color: #ccc;
+}
+
 fieldset {
     width: 40%;
     margin: 0 auto;
