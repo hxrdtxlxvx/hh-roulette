@@ -1,6 +1,8 @@
-var rouletteButton = document.querySelector('#rouletteButton');
-var resultDiv = document.querySelector('#result');
-var data = [];
+"use strict";
+
+let rouletteButton = document.querySelector('#rouletteButton');
+let resultDiv = document.querySelector('#result');
+let data = [];
 
 fetch('test.txt')
     .then(response => response.text())
@@ -13,9 +15,9 @@ fetch('test.txt')
     });
 
 rouletteButton.onclick = function() {
-    var selectedLocations = document.querySelectorAll('input[name="위치"]:checked');
-    var selectedMenus = document.querySelectorAll('input[name="메뉴"]:checked');
-    var selectedData = [];
+    let selectedLocations = document.querySelectorAll('input[name="위치"]:checked');
+    let selectedMenus = document.querySelectorAll('input[name="메뉴"]:checked');
+    let selectedData = [];
 
     selectedLocations = Array.from(selectedLocations).map(location => location.value);
     selectedMenus = Array.from(selectedMenus).map(menu => menu.value);
@@ -30,10 +32,10 @@ rouletteButton.onclick = function() {
     console.log('Data after filter:', selectedData); 
 
     if (selectedData.length > 0) {
-        var randomIndex = Math.floor(Math.random() * selectedData.length);
-        var selectedRestaurant = selectedData[randomIndex];
+        let randomIndex = Math.floor(Math.random() * selectedData.length);
+        let selectedRestaurant = selectedData[randomIndex];
         resultDiv.textContent = selectedRestaurant.name + (selectedRestaurant.note ? " (" + selectedRestaurant.note + ")" : "");
     } else {
         resultDiv.textContent = "범위와 메뉴를 선택해 주세요.";
     }
-};
+}
